@@ -1,0 +1,14 @@
+@page {
+  size: 62mm 20mm;
+  margin: 2mm;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Roboto, Arial, sans-serif;
+}
+
+body > * {
+  font-size: 3mm;
+}
