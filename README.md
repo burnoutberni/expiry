@@ -16,7 +16,7 @@ Start FastAPI server
 uvicorn main:app --reload
 ```
 
-This serves all static files from `/web` as well as a rudimentary api at `/api` (plus automatically generate documenation at `/docs`).
+This serves all static files from `/web` as well as a rudimentary api at `/print` (plus automatically generate documenation at `/docs`).
 
 Whenever the API is called, a new PDF is generated at `print/label.pdf`.
 

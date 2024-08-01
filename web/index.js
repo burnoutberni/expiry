@@ -37,7 +37,7 @@ const print = async function (name) {
         const now = new Date
         const payload = { name: name, timestamp: `${now.toLocaleDateString('de-AT')} ${now.toLocaleTimeString('de-AT')}` }
         console.log(payload)
-        const response = await fetch('/api', {
+        const response = await fetch('/print', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

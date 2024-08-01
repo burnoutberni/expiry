@@ -11,7 +11,7 @@ class Print(BaseModel):
     name: str
     timestamp: str
 
-@app.post("/api")
+@app.post("/print")
 def print_label(obj_in: Print):
     html_content = generate_html_content(obj_in.name, obj_in.timestamp)
     generate_pdf(html_content)
