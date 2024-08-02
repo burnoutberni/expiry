@@ -4,8 +4,7 @@ from pydantic import BaseModel
 from weasyprint import HTML, CSS
 
 app = FastAPI()
-
-app.mount("/web", StaticFiles(directory="web"), name="web")
+app.mount("/web", StaticFiles(directory="web", html=True), name="web")
 
 class Print(BaseModel):
     name: str
