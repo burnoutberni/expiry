@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
-# from weasyprint import HTML, CSS
+from weasyprint import HTML, CSS
 # import cups
 import subprocess
 
@@ -14,15 +14,15 @@ class Print(BaseModel):
 
 @app.post("/print")
 def print_label(obj_in: Print):
-    # html_content = generate_html_content(obj_in.name, obj_in.timestamp)
-    # generate_pdf(html_content)
+    html_content = generate_html_content(obj_in.name, obj_in.timestamp)
+    generate_pdf(html_content)
     # print_file('print/label.pdf', 'QL600')
-    print_string = 'this item belongs to \n'
-    print_string += obj_in.name
-    print_string += '\n\nprinted at'
-    print_string += obj_in.timestamp
-    subprocess.run(['lpr', '-P', 'QL600'], input=print_string, text=True)
-    return { 'status': 'success'}
+    # print_string = 'this item belongs to \n'
+    # print_string += obj_in.name
+    # print_string += '\n\nprinted at'
+    # print_string += obj_in.timestamp
+    subprocess.run(['lpr', '-o', 'landscape' '-P', 'QL600', 'print/label.pdf'])
+    return { 'status': 'success' }
 
 def generate_html_content(name: str, timestamp: str) -> str:
     return f"""
