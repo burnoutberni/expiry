@@ -21,7 +21,7 @@ def print_label(obj_in: Print):
     # print_string += obj_in.name
     # print_string += '\n\nprinted at'
     # print_string += obj_in.timestamp
-    subprocess.run(['lpr', '-o', 'landscape' '-P', 'QL600', 'print/label.pdf'])
+    subprocess.run(['lpr', '-o', 'orientation-requested=6', '-P', 'QL600', 'print/label.pdf'])
     return { 'status': 'success' }
 
 def generate_html_content(name: str, timestamp: str) -> str:
