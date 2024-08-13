@@ -25,6 +25,10 @@ def print_label(obj_in: Print):
     return { 'status': 'success' }
 
 def generate_html_content(name: str, timestamp: str) -> str:
+    verb = 'belongs to'
+    if name == 'public':
+        verb = 'is'
+
     return f"""
     <!DOCTYPE html>
     <html>
@@ -33,7 +37,7 @@ def generate_html_content(name: str, timestamp: str) -> str:
     </head>
     <body>
         <div>
-            <p>This item belongs to</p>
+            <p>This item {verb}</p>
             <h1>{name}</h1>
             <p>In the fridge since <b>{timestamp}</b></p>
         </div>

@@ -1,5 +1,5 @@
 @page {
-  size: 62mm 31.2mm;
+  size: 62mm 24mm;
   margin: 0mm;
 }
 
@@ -17,18 +17,16 @@ body {
 div {
   width: 100%;
   height: 100%;
-  box-sizing: border-box;
-  border: 5px solid black;
 }
 
 div > * {
   display: block;
   text-align: center;
-  margin: 3mm;
+  margin: 2mm;
 }
 
 h1 {
-  font-size: 8mm;
+  font-size: 6mm;
 }
 
 p {

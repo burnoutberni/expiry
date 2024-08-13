@@ -1,6 +1,11 @@
 // Helper to create quick menu buttons
 const addButton = (name) => {
     const newButton = document.createElement('button')
+
+    if (name === 'public') {
+        newButton.classList.add('main')
+    }
+
     newButton.innerText = name
     newButton.addEventListener('click', () => print(name))
     document.querySelector('.names').appendChild(newButton)

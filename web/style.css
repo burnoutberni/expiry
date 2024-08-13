@@ -58,14 +58,20 @@ h1 {
 button, input[type=submit] {
     font-weight: bold;
     padding: 0.4rem;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     border: 1px solid black;
 }
 button:active, input[type=submit]:active {
     text-decoration: underline;
-    background-color: white;
-    color: black;
+    background-color: white !important;
+    color: black !important;
+}
+
+button.main, input[type=submit].main {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
 }
 
 .names {
