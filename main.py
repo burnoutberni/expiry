@@ -32,8 +32,11 @@ def generate_html_content(name: str, timestamp: str) -> str:
         <link rel="stylesheet" href="print/print-styles.css">
     </head>
     <body>
-        <h1>This item belongs to {name}</h1>
-        <p>In the fridge since {timestamp}</p>
+        <div>
+            <p>This item belongs to</p>
+            <h1>{name}</h1>
+            <p>In the fridge since <b>{timestamp}</b></p>
+        </div>
     </body>
     </html>
     """
